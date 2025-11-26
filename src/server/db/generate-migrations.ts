@@ -2,6 +2,7 @@ import { SqlDatabase } from 'remult'
 import { PostgresDataProvider } from 'remult/postgres'
 import { pool } from './connection'
 import { Task } from '../../shared/entities/Task'
+import { Product } from '../../shared/entities/Product'
 import { writeFileSync, mkdirSync, existsSync } from 'fs'
 import { join } from 'path'
 

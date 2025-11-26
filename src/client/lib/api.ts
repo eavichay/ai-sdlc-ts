@@ -1,6 +1,9 @@
+import { remult as remultInstance } from 'remult'
 import type { Task } from '../../shared/entities/Task'
 
 const API_BASE = '/api'
+
+export const remult = remultInstance
 
 export const api = {
   tasks: {

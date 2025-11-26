@@ -1,12 +1,20 @@
 {
   "mcpServers": {
+    "figma": {
+      "type": "sse",
+      "url": "http://127.0.0.1:3845/sse"
+    },
+    "sequential-thinking": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"]
+    },
+    "github": {
+      "type": "http",
+      "url": "https://api.githubcopilot.com/mcp/"
+    },
     "agentic-sdlc-ai-directives": {
       "command": "npx",
       "args": ["-y", "@tikalk/agentic-sdlc-ai-directives-mcp"]
-    },
-    "context7": {
-      "command": "npx",
-      "args": ["-y", "@upstash/context7-mcp"]
     }
   }
 }
