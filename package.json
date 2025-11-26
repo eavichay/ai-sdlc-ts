@@ -4,7 +4,7 @@
   "description": "Modern fullstack TypeScript project with Vite, React, TanStack Router, TanStack Query, Remult, and PostgreSQL - aligned with Agentic SDLC AI Directives",
   "type": "module",
   "scripts": {
-    "dev": "concurrently \"npm:dev:server\" \"npm:dev:client\"",
+    "dev": "concurrently \"yarn:dev:server\" \"yarn:dev:client\"",
     "dev:server": "tsx watch src/server/index.ts",
     "dev:client": "vite",
     "build": "tsc && vite build",
@@ -19,16 +19,19 @@
     "db:migrate": "tsx src/server/db/migrate.ts"
   },
   "dependencies": {
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
     "@tanstack/react-query": "^5.60.5",
     "@tanstack/react-router": "^1.136.11",
-    "remult": "^0.27.5",
+    "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "pg": "^8.13.1",
-    "dotenv": "^16.4.7"
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "remult": "^0.27.5"
   },
   "devDependencies": {
+    "@tanstack/react-query-devtools": "^5.60.5",
+    "@tanstack/router-devtools": "^1.136.11",
+    "@tanstack/router-plugin": "^1.136.11",
     "@types/express": "^5.0.0",
     "@types/node": "^22.10.2",
     "@types/pg": "^8.11.10",
@@ -37,9 +40,6 @@
     "@typescript-eslint/eslint-plugin": "^8.19.1",
     "@typescript-eslint/parser": "^8.19.1",
     "@vitejs/plugin-react": "^4.3.4",
-    "@tanstack/router-devtools": "^1.136.11",
-    "@tanstack/react-query-devtools": "^5.60.5",
-    "@tanstack/router-plugin": "^1.136.11",
     "concurrently": "^9.1.2",
     "eslint": "^9.17.0",
     "prettier": "^3.4.2",
@@ -50,5 +50,6 @@
   },
   "engines": {
     "node": ">=18.0.0"
-  }
+  },
+  "packageManager": "yarn@4.12.0"
 }
